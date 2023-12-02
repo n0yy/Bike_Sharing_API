@@ -3,6 +3,10 @@ from predict import predict
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return "Hi.."
+
 @app.route("/predict", methods=["POST"])
 def get_predict():
     """
